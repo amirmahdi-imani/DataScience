@@ -1,0 +1,71 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Jupyter Notebook
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# Virtual Environment
+# =========================
+
+venv/
+env/
+.venv/
+
+# =========================
+# Environment Variables
+# =========================
+
+.env
+
+# =========================
+# IDE
+# =========================
+
+.vscode/
+
+# =========================
+# OS Generated Files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs & Temporary Files
+# =========================
+
+*.log
+*.tmp
+
+# =========================
+# Dataset Files
+# =========================
+
+# Raw healthcare dataset
+data/*.csv
+data/*.zip
+
+# Keep processed data folder structure
+!data/processed/
+
+# =========================
+# CatBoost Temporary Files
+# =========================
+
+catboost_info/
+
+# =========================
+# Testing
+# =========================
+
+.pytest_cache/
+.coverage

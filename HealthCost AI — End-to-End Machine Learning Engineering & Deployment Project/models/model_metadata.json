@@ -1,0 +1,20 @@
+{
+  "model_type": "RandomForestRegressor",
+  "version": "1.0.0",
+  "trained_at": "2026-09-09T21:00:45.118906",
+  "target_transform": "log1p (inverse: expm1)",
+  "features": [
+    "age",
+    "sex",
+    "bmi",
+    "children",
+    "smoker",
+    "region"
+  ],
+  "test_set_metrics": {
+    "mae_usd": 2040.87,
+    "rmse_usd": 4362.51,
+    "r2": 0.8964
+  },
+  "notes": "Metrics computed on held-out 20% test set before final refit on full data."
+}

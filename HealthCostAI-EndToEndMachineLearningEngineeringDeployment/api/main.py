@@ -1,4 +1,7 @@
+
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
 from .schemas import PredictionRequest, ModelInfoResponse
 from .inference import predict
 
@@ -7,6 +10,18 @@ app = FastAPI(
     title="HealthCost AI API",
     description="API for predicting medical insurance charges",
     version="1.0.0"
+)
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
@@ -19,7 +34,6 @@ def health_check():
 
 @app.post("/predict")
 def make_prediction(request: PredictionRequest):
-
     input_data = [[
         request.age,
         request.sex,

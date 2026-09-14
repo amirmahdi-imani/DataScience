@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: healthcost-ai-api
-    env: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    healthCheckPath: /health
